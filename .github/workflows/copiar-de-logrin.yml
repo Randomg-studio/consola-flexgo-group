@@ -1,0 +1,39 @@
+# consola.flexgogroup.com usa el mismo index.html que logrin.flexgogroup.com.
+# Se sube solo a Integra-System; este proceso lo copia aquí.
+name: Copiar de Logrin
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: copiar-de-logrin
+  cancel-in-progress: false
+
+jobs:
+  copiar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Copiar index.html si cambió
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Con git se lee la última versión real; la dirección raw puede tardar minutos en actualizarse.
+          git clone --depth 1 https://github.com/Randomg-studio/Integra-System.git "$RUNNER_TEMP/origen"
+          if cmp -s "$RUNNER_TEMP/origen/index.html" index.html; then
+            echo "La consola ya tiene la misma versión."
+            exit 0
+          fi
+          cp "$RUNNER_TEMP/origen/index.html" index.html
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Copiar index.html de Integra-System"
+          git push
+          gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/builds" || true
