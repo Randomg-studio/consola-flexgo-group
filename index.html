@@ -199,6 +199,119 @@
  .sf-hero p{font-size:16px}
 }
 @media(prefers-reduced-motion:reduce){.sf-header-row,.sf-search,.sf-switch span,.sf-switch span::after,.sf-actions button,.sf-nav button{transition:none}}
+
+/* ===== R-100 · Mi Mercadito: inicio, categorías y tarjetas ===== */
+.sf-wrap{max-width:1320px}
+.sf-section{margin:72px 0}
+.sf-heading{margin-bottom:28px;align-items:flex-end}
+.sf-heading>button,.sf-heading>span{font-size:15px;font-weight:600;color:var(--sf-ink);border-radius:10px;padding:8px 4px}
+.sf-heading>button:hover{color:var(--sf-accent)}
+.sf-eyebrow{font-size:13px;letter-spacing:2px;font-weight:800}
+/* Portada */
+.sf-hero{min-height:520px;border-radius:28px;padding:72px 64px 92px}
+.sf-hero-note{font-size:13px;margin-top:26px}
+.sf-hero-note svg{width:18px}
+.sf-primary{font-size:16px!important;font-weight:700;padding:17px 26px!important;border-radius:14px!important;box-shadow:0 10px 24px rgba(81,85,206,.28);transition:transform .2s,box-shadow .2s}
+.sf-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(81,85,206,.34)}
+.sf-carousel{bottom:28px;left:64px;font-size:13px;gap:10px}
+.sf-carousel button{font-size:13px;padding:8px 13px;border-radius:10px;min-height:36px;background:rgba(255,255,255,.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+/* Categorías: tarjetas limpias */
+.sf-categories{gap:16px;padding:6px 2px 18px}
+.sf .sf-categories button{min-width:140px;max-width:170px;padding:22px 12px 18px;border:1px solid var(--sf-line);border-radius:18px;background:var(--sf-card);gap:10px;transition:border-color .2s,box-shadow .2s,transform .2s}
+.sf .sf-categories button:hover{border-color:#85CCE5;box-shadow:0 10px 28px rgba(44,134,176,.10);transform:translateY(-2px)}
+.sf .sf-categories button[aria-pressed=true]{border-color:var(--sf-accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--sf-accent) 18%,transparent)}
+.sf .sf-categories button[aria-pressed=true] .sf-object{outline:0}
+.sf-categories .sf-object{width:76px;height:76px;border-radius:22px}
+.sf-categories .sf-object svg{width:40px;height:40px}
+.sf-categories b{font-size:15px;font-weight:700;line-height:1.25}
+.sf-categories button>span:last-child{font-size:13px;font-weight:600;color:var(--sf-accent)}
+.sf-sectors{max-height:none;overflow-x:auto;overflow-y:visible;flex-wrap:nowrap}
+/* Colecciones y banners */
+.sf-collections{gap:20px}
+.sf-collection{min-height:190px;padding:28px;border-radius:22px}
+.sf-collection small{font-size:12px;letter-spacing:1.6px;font-weight:700}
+.sf-collection b{font-size:28px;letter-spacing:-.8px;font-weight:800}
+.sf-collection em{font-size:15px;font-weight:600}
+.sf-collection p{font-size:14px;line-height:1.5}
+.sf-banner{padding:52px 60px;border-radius:28px}
+.sf-banner h2{font-size:clamp(28px,3vw,40px);letter-spacing:-1.2px;line-height:1.12}
+.sf-banner p{font-size:16px;line-height:1.55}
+.sf-banner button{font-size:16px;font-weight:700}
+/* Tarjetas de producto */
+.sf-results{font-size:15px;margin-bottom:22px}
+.sf-grid{gap:24px}
+.sf-card{border:1px solid #E5EAF1;border-radius:18px;box-shadow:0 1px 2px rgba(16,36,73,.04)}
+.sf[data-theme=dark] .sf-card{border-color:var(--sf-line)}
+.sf-card:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(24,48,80,.10)}
+.sf-product-art{height:auto;aspect-ratio:1.15}
+.sf:not([data-theme="dark"]) .sf-product-art{background:#F3F6FA}
+.sf-product-art>img{transition:transform .35s ease}
+.sf-card:hover .sf-product-art>img{transform:scale(1.04)}
+.sf-product-body{padding:18px 18px 18px}
+.sf-product-body>small{font-size:12px;letter-spacing:1px;font-weight:800;color:var(--sf-muted)}
+.sf-product-body h3{font-size:17px;line-height:1.35;font-weight:700;min-height:46px;margin:8px 0 6px}
+.sf-product-body h3 button{font:inherit;color:inherit;text-align:left}
+.sf-product-body p{font-size:14px}
+.sf .sf-store-link{font-size:14px!important;font-weight:600;color:var(--sf-accent)}
+.sf-buy{margin-top:16px}
+.sf-buy strong{font-size:22px;font-weight:800;letter-spacing:-.8px}
+.sf-buy strong small{font-size:13px}
+.sf-add{width:46px;height:46px;border-radius:13px;transition:transform .2s,background .2s}
+.sf:not([data-theme="dark"]) .sf-add{background:var(--sf-navy);color:#fff}
+.sf-add svg{width:22px;height:22px}
+.sf-add:hover{transform:scale(1.06)}
+.sf-buy .qty{font-size:16px;font-weight:700}
+.sf-buy .qty button{padding:6px 12px;font-size:16px;min-width:36px;min-height:36px}
+.sf-buy .btn{font-size:14px;padding:10px 14px}
+.sf-heart{width:40px;height:40px;top:12px;right:12px;box-shadow:0 2px 8px rgba(16,36,73,.10)}
+.sf-heart svg{width:20px}
+.sf-stock,.sf-18{font-size:12px;font-weight:800}
+/* Tiendas */
+.sf-stores{gap:20px}
+.sf-stores>button{padding:24px;border-radius:18px;gap:16px;transition:border-color .2s,box-shadow .2s,transform .2s}
+.sf-stores>button:hover{border-color:#85CCE5;box-shadow:0 10px 28px rgba(44,134,176,.10);transform:translateY(-2px)}
+.sf-stores b{font-size:18px;font-weight:700}
+.sf-stores small{font-size:14px}
+/* Pie */
+.sf-benefits b{font-size:16px}.sf-benefits small{font-size:14px;line-height:1.5}
+.sf-footer h4{font-size:15px}
+.sf-footer p,.sf-footer a,.sf-footer button{font-size:14px}
+.sf-footer-bottom{font-size:13px}
+@media(max-width:1000px){.sf-grid{gap:18px}.sf-hero{padding:56px 40px 88px}.sf-carousel{left:40px}}
+@media(max-width:700px){
+ .sf-section{margin:44px 0}
+ .sf-heading{margin-bottom:18px}
+ .sf-heading>button,.sf-heading>span{font-size:14px}
+ .sf-eyebrow{font-size:12px;letter-spacing:1.6px}
+ .sf-hero{display:flex;flex-direction:column;min-height:0;padding:30px 24px 24px;border-radius:22px}
+ .sf-hero:not(.sf-hero-campaign) .sf-art{position:relative;right:auto;bottom:auto;align-self:center;flex:none;margin:-120px 0 8px;opacity:1}
+ .sf-carousel{position:relative;left:auto!important;bottom:auto!important;z-index:3;margin-top:6px}
+ .sf-hero-campaign{min-height:540px}.sf-hero-campaign .sf-carousel{margin-top:auto}
+ .sf-carousel button{font-size:13px;padding:8px 12px}
+ .sf-hero-note{font-size:12px}
+ .sf-primary{font-size:16px!important;padding:15px 22px!important}
+ .sf .sf-categories button{min-width:118px;padding:16px 10px 14px}
+ .sf-categories .sf-object{width:62px;height:62px;border-radius:18px}
+ .sf-categories .sf-object svg{width:32px;height:32px}
+ .sf-categories b{font-size:14px}
+ .sf-categories button>span:last-child{font-size:12px}
+ .sf-collection{min-height:150px;padding:22px}
+ .sf-collection b{font-size:23px}
+ .sf-collection small{font-size:11px}
+ .sf-banner{padding:30px 24px;border-radius:22px}
+ .sf-banner h2{font-size:25px}
+ .sf-grid{gap:12px}
+ .sf-product-body{padding:12px}
+ .sf-product-body>small{font-size:11px}
+ .sf-product-body h3{font-size:15px;min-height:40px}
+ .sf .sf-store-link{font-size:13px!important}
+ .sf-buy strong{font-size:18px}
+ .sf-add{width:42px;height:42px}
+ .sf-heart{width:36px;height:36px;top:8px;right:8px}
+ .sf-stores>button{padding:18px}
+ .sf-stores b{font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){.sf-card,.sf-product-art>img,.sf-primary,.sf-add,.sf .sf-categories button,.sf-stores>button{transition:none}.sf-card:hover,.sf-card:hover .sf-product-art>img{transform:none}}
 </style></head><body>
 <title>Logrin Negocio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
