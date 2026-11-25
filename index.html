@@ -679,6 +679,20 @@
 @media (max-width:700px){.ilp:not(.lg-page) .lp-quiz{padding:25px}.ilp:not(.lg-page) .lp-contact .lp-form{padding:20px}.ilp:not(.lg-page) .lp-top{width:96%}}
 @media (prefers-reduced-motion:reduce){.ilp:not(.lg-page) .lp-btn:hover{transform:none}}
 </style>
+<style id="r136-lg">
+/* ===== R-136 · Portada de Logrin en celular: la franja «‹ Página oficial de FlexGo Group» se ve completa =====
+   Va arriba de la portada (antes la tapaba el fondo de la portada), con el mismo color del fondo (sin corte recto) y espacio para el notch.
+   La barra en píldora queda debajo, sin taparla, y sigue fija al bajar. Solo estilos. */
+@media (max-width:960px){
+  .ilp:not(.lg-page) .lp-fx-m{position:relative;z-index:32;background:#0b2440!important;border:0;line-height:1.35;
+    padding:calc(9px + env(safe-area-inset-top, 0px)) 16px 7px;min-height:0}
+  .ilp:not(.lg-page) .lp-top{margin-top:6px;top:max(8px, env(safe-area-inset-top, 0px))}
+  .ilp:not(.lg-page) .lp-hero{margin-top:-72px;background-color:#0b2440}
+}
+@media (max-width:520px){
+  .ilp:not(.lg-page) .lp-hero{margin-top:-66px}
+}
+</style>
 </head><body>
 <title>Logrin Negocio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
